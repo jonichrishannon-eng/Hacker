@@ -1,0 +1,37 @@
+---
+---
+<section id="keyboard" class="flex md:hidden h-full flex-col justify-end pb-2">
+    <div id="keyboard_container" class="w-full flex flex-col justify-center items-center gap-1">
+        <div class="flex justify-center gap-1">
+            <div class="k_key">Q</div><div class="k_key">W</div><div class="k_key">E</div><div class="k_key">R</div><div class="k_key">T</div><div class="k_key">Y</div><div class="k_key">U</div><div class="k_key">I</div><div class="k_key">O</div><div class="k_key">P</div>
+        </div>
+        <div class="flex justify-center gap-1">
+            <div class="k_key">A</div><div class="k_key">S</div><div class="k_key">D</div><div class="k_key">F</div><div class="k_key">G</div><div class="k_key">H</div><div class="k_key">J</div><div class="k_key">K</div><div class="k_key">L</div>
+        </div>
+        <div class="flex justify-center gap-1">
+            <div class="k_key w-12">SHIFT</div><div class="k_key">Z</div><div class="k_key">X</div><div class="k_key">C</div><div class="k_key">V</div><div class="k_key">B</div><div class="k_key">N</div><div class="k_key">M</div><div class="k_key w-12">ENTER</div>
+        </div>
+        <div class="flex justify-center gap-1 mt-1">
+            <div class="k_key w-48">SPACE</div>
+        </div>
+    </div>
+</section>
+<style>
+    .k_key {
+        border: 1px solid rgb(var(--color_r), var(--color_g), var(--color_b));
+        width: 1.8rem;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Fira Mono";
+        font-size: 0.7rem;
+        cursor: pointer;
+        background: rgba(var(--color_r), var(--color_g), var(--color_b), 0.1);
+        transition: background 0.1s, color 0.1s;
+    }
+    .k_key:hover, .k_key:active, .k_key.active {
+        background: rgb(var(--color_r), var(--color_g), var(--color_b));
+        color: var(--color_black);
+    }
+</style>
