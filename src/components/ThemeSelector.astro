@@ -1,0 +1,28 @@
+---
+---
+<div id="theme_selector" class="fixed top-2 right-2 z-[60]">
+    <select id="theme_select" class="bg-[var(--color_light_black)] text-[rgb(var(--color_r),var(--color_g),var(--color_b))] border border-[rgb(var(--color_r),var(--color_g),var(--color_b))] p-1 text-xs font-['United_Sans_Medium'] cursor-pointer outline-none">
+        <option value="tron">Tron</option>
+        <option value="blade">Blade</option>
+        <option value="matrix">Matrix</option>
+        <option value="red">Red</option>
+        <option value="nord">Nord</option>
+        <option value="cyborg">Cyborg</option>
+        <option value="interstellar">Interstellar</option>
+        <option value="apollo">Apollo</option>
+        <option value="chalkboard">Chalkboard</option>
+        <option value="navy">Navy</option>
+    </select>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("theme_select");
+        const currentTheme = localStorage.getItem("edex-theme") || "tron";
+        select.value = currentTheme;
+
+        select.addEventListener("change", (e) => {
+            window.changeTheme(e.target.value);
+        });
+    });
+</script>
